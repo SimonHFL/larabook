@@ -11,10 +11,12 @@
     @include('layouts.partials.nav')
 
     <div class="container">
+        @include('flash::message')
+
         @yield('content')
     </div>
-
-    <scripts src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></scripts>
-
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script>$('#flash-overlay-modal').modal();</script>
 </body>
 </html>
